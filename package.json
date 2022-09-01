@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "yarn": "^1.22.19"
+  },
+  "name": "BlockChain",
+  "version": "1",
+  "description": "mi primera blockchain",
+  "main": "index.js",
+  "author": "Carlos",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/node": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "nodemon": "^2.0.19"
+  }
+}
