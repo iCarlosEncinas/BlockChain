@@ -1,5 +1,4 @@
 import {SHA256} from 'crypto-js'
-
 class Block {
     constructor(timestamp, previousHash, hash, data) {
         this.timestamp = timestamp;
