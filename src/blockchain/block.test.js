@@ -18,31 +18,28 @@ describe('Block', () => {
 
         expect(block.timestamp).toEqual(timestamp);
         expect(block.previousHash).toEqual(previousBlock.hash);
-        expect(block.hash).toEqual(hash);
         expect(block.data).toEqual(data);
+        expect(block.hash).toEqual(hash);
     });
 
-    it('Usando static mine', () => {
+    it('usando static mine', () => {
         const block = Block.mine(previousBlock, data);
 
         expect(block.hash.length).toEqual(64);
         expect(block.previousHash).toEqual(previousBlock.hash);
-        expect(block.data).toEqual(data);
+        expect(data).toEqual(data);
     });
 
-    it('Usando static hash', () => {
-        const block = Block.hash(timestamp, previousBlock, data);
-
+    it('usando static hash', () => {
         hash = Block.hash(timestamp, previousBlock.hash, data);
-        const hasOutput = "87c3cf370c94a4c239f50115ee34b4b66f421d572b7064d60c3809b9d33a3b06";
+        const hasOutput = "d32a24806ba05e9e78da28f11e7f39acfa027e798ab6686dce96743e5ab0ac9a";
 
         expect(hash).toEqual(hasOutput);
     });
 
-    it('Usando toString', () => {
+    it('usando toString', () => {
         const block = Block.mine(previousBlock, data);
 
         expect(typeof block.toString()).toEqual('string');
-
     });
 });

@@ -17,5 +17,3 @@ export default (blockchain) => {
 
     return true;
 };
-Footer
-© 2022 GitHub, Inc
